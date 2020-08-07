@@ -1,0 +1,52 @@
+.filter {
+  &__block {
+    margin-bottom: 35px;
+
+    &-heading {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    &-range {
+      display: flex;
+    }
+  }
+
+  &__range {
+    &-input {
+      height: 24px;
+      width: 100px;
+      margin-right: 10px;
+      padding: 7px 2px 7px 25px;
+      border: 1px solid map_get($palette, border);
+    }
+
+    &-item {
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        content: attr(data-text);
+        display: inline-block;
+        width: 20px;
+        height: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__btn {
+    min-width: 185px;
+    margin-bottom: 11px;
+
+    &-reset {
+      display: none;
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+}

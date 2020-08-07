@@ -3,6 +3,10 @@
 
   &__item {
     margin-bottom: 30px;
+
+    &.hide {
+      display: none;
+    }
   }
 
   &__wrap {

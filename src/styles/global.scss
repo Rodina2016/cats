@@ -40,6 +40,7 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
+  outline: none;
 }
 
 html {
@@ -96,7 +97,7 @@ h1 {
   position: relative;
   padding: 15px 0;
   min-width: 230px;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 100%;
   border: 1px solid map_get($palette, accent-main);
@@ -115,5 +116,29 @@ h1 {
 
   &:focus {
     outline: none;
+  }
+
+  &-yellow {
+    padding: 13px 0;
+    background-color: map_get($palette, accent-second);
+    border-color: map_get($palette, accent-second);
+    color: map_get($palette, content);
+    &:hover {
+      background-color: map_get($palette, accent-second);
+      border-color: map_get($palette, accent-second);
+    }
+
+    &-transparent {
+      padding: 13px 0;
+      background-color: transparent;
+      border-color: map_get($palette, accent-second);
+      color: map_get($palette, content);
+
+      &:hover {
+        background-color: transparent;
+        border-color: map_get($palette, accent-second);
+        color: map_get($palette, content);
+      }
+    }
   }
 }

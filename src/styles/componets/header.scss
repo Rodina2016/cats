@@ -1,6 +1,6 @@
 .header {
   padding: $grid-module 0;
-  background-color: map_get($palette, header);
+  background-color: map_get($palette, bg);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
   position: fixed;
   width: 100%;
@@ -13,7 +13,8 @@
     }
 
     &-text {
-      font-family: 'Boomboom', 'Arial';
+      color: map_get($palette, content);
+      font-family: Boomboom, Arial, serif;
       font-size: 16px;
       line-height: 16px;
       letter-spacing: 0.03em;

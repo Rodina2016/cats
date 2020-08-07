@@ -13,8 +13,8 @@
       z-index: 0;
 
       &:before {
-        content: attr(data-text);
         position: absolute;
+        content: attr(data-text);
         left: 0;
         right: 0;
         padding-left: 1px;
