@@ -1,0 +1,27 @@
+.header {
+  padding: $grid-module 0;
+  background-color: map_get($palette, header);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  &__logo {
+    &-link {
+      display: inline-block;
+      text-align: center;
+    }
+
+    &-text {
+      font-family: 'Boomboom', 'Arial';
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+    }
+
+    &-svg {
+      width: 32px;
+      height: 35px;
+    }
+  }
+}

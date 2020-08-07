@@ -1,0 +1,11 @@
+extends common/layout
+
+block content
+    main.main
+        .wrapper
+            h1 Наши номера
+            .grid.ungutter
+                .xl-3
+                    include partials/sidebar.pug
+                .xl-9
+                    include partials/cards.pug

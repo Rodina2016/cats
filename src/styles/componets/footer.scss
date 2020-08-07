@@ -1,0 +1,31 @@
+.footer {
+  padding: 20px 0 12px 0;
+  border-top: 1px solid map_get($palette, border-light);
+
+  &__item {
+    margin-right: 30px;
+    font-size: 12px;
+    color: map_get($palette, content-light);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-link {
+      color: map_get($palette, content-light);
+
+      &--dark {
+        color: map_get($palette, content);
+      }
+
+      &:hover {
+        color: map_get($palette, content-light);
+      }
+    }
+  }
+
+  &__production {
+    flex-grow: 1;
+    text-align: right;
+  }
+}

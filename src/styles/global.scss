@@ -1,0 +1,119 @@
+@import "../../node_modules/normalize.css/normalize";
+
+@font-face {
+  font-family: 'Boomboom';
+  src: local('Boomboom'), url('../fonts/boomboom/boomboom.woff2') format('woff2'), url('../fonts/boomboom/boomboom.woff') format('woff'), url('../fonts/boomboom/boomboom.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Regular'), local('Lato-Regular'), url('../fonts/lato/latoregular.woff2') format('woff2'), url('../fonts/lato/latoregular.woff') format('woff'), url('../fonts/lato/latoregular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Medium'), local('Lato-Medium'), url('../fonts/lato/latomedium.woff2') format('woff2'), url('../fonts/lato/latomedium.woff') format('woff'), url('../fonts/lato/latomedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato Bold'), local('Lato-Bold'), url('../fonts/lato/latosemibold.woff2') format('woff2'), url('../fonts/lato/latosemibold.woff') format('woff'), url('../fonts/lato/latosemibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik Medium'), local('Rubik-Medium'), url('../fonts/rubik/Rubikmedium.woff2') format('woff2'), url('../fonts/rubik/Rubikmedium.woff') format('woff'), url('../fonts/rubik/Rubikmedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: local('Rubik Bold'), local('Rubik-Bold'), url('../fonts/rubik/Rubikbold.woff2') format('woff2'), url('../fonts/rubik/Rubikbold.woff') format('woff'), url('../fonts/rubik/Rubikbold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: map_get($font, body);
+  color: map_get($palette, content);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: map_get($palette, accent-main);
+  transition: color $transition;
+
+  &:hover {
+    color: map_get($palette, accent-second);
+  }
+}
+
+p {
+  font-size: 14px;
+}
+
+.main {
+  padding-top: 62px;
+  flex-grow: 1;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 74px;
+}
+
+h1 {
+  margin-top: 0;
+  font-family: map_get($font, heading);
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.button {
+  position: relative;
+  padding: 15px 0;
+  min-width: 230px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  border: 1px solid map_get($palette, accent-main);
+  background-color: map_get($palette, accent-main);
+  color: map_get($palette, bg);
+  border-radius: 25px;
+  transition: $transition;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    background-color: map_get($palette, accent-main-dark);
+    border-color: map_get($palette, accent-main-dark);
+    box-shadow: none;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
