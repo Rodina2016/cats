@@ -11,6 +11,38 @@
     &-range {
       display: flex;
     }
+
+    &-check {
+      display: none;
+
+      &:checked {
+        & + .filter__block-label {
+          &:before {
+            background: url("../img/check.png") no-repeat center;
+          }
+        }
+      }
+    }
+
+    &-item {
+      margin-bottom: 23px;
+    }
+
+    &-label {
+      position: relative;
+      padding-left: 25px;
+      &:before {
+        position: absolute;
+        left: 0;
+        top: -3px;
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid map_get($palette, border);
+        box-sizing: border-box;
+      }
+    }
   }
 
   &__range {

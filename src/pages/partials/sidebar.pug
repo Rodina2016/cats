@@ -1,56 +1,57 @@
 aside.filter
-    .filter__block
-        .filter__block-heading Цена за сутки,₽
-        .filter__block-range
-            .filter__range-item(data-text='от')
-                input.filter__range-input.filter-range-from(type="number")
-            .filter__range-item(data-text='до')
-                input.filter__range-input.filter-range-to(type="number")
+    form#filter-card
+        .filter__block
+            .filter__block-heading Цена за сутки,₽
+            .filter__block-range
+                .filter__range-item(data-text='от')
+                    input.filter__range-input.filter-range-from(type="number")
+                .filter__range-item(data-text='до')
+                    input.filter__range-input.filter-range-to(type="number")
 
-    .filter__block
-        .filter__block-heading Площадь
-        .filter__block-item
-            label.filter__block-label 0.63 м2
-                input.filter__block-check.filter-square(type="checkbox" value='0.63')
+        .filter__block
+            .filter__block-heading Площадь
+            .filter__block-item
+                input.filter__block-check.filter-square(type="checkbox" value='0.63' id="square1")
+                label.filter__block-label(for="square1") 0.63 м2
 
-        .filter__block-item
-            label.filter__block-label 0.90 м2
-                input.filter__block-check.filter-square(type="checkbox" value='0.90')
+            .filter__block-item
+                input.filter__block-check.filter-square(type="checkbox" value='0.90' id="square2")
+                label.filter__block-label(for="square2") 0.90 м2
 
-        .filter__block-item
-            label.filter__block-label 1.13 м2
-                input.filter__block-check.filter-square(type="checkbox" value='1.13')
+            .filter__block-item
+                input.filter__block-check.filter-square(type="checkbox" value='1.13' id="square3")
+                label.filter__block-label(for="square3") 1.13 м2
 
-        .filter__block-item
-            label.filter__block-label 1.56 м2
-                input.filter__block-check.filter-square(type="checkbox" value='1.56')
+            .filter__block-item
+                input.filter__block-check.filter-square(type="checkbox" value='1.56' id="square4")
+                label.filter__block-label(for="square4") 1.56 м2
 
-        .filter__block-item
-            label.filter__block-label 2.56 м2
-                input.filter__block-check.filter-square(type="checkbox" value='2.56')
+            .filter__block-item
+                input.filter__block-check.filter-square(type="checkbox" value='2.56' id="square5")
+                label.filter__block-label(for="square5") 2.56 м2
 
-    .filter__block
-        .filter__block-heading Оснащение номера
-        .filter__block-item
-            label.filter__block-label Пустой номер
-                input.filter__block-check.filter-services(type="checkbox" value='empty')
+        .filter__block
+            .filter__block-heading Оснащение номера
+            .filter__block-item
+                input.filter__block-check.filter-services(type="checkbox" value='empty' id='services1')
+                label.filter__block-label(for="services1") Пустой номер
 
-        .filter__block-item
-            label.filter__block-label Лежак
-                input.filter__block-check.filter-services(type="checkbox" value='sofa')
+            .filter__block-item
+                input.filter__block-check.filter-services(type="checkbox" value='sofa' id='services2')
+                label.filter__block-label(for="services2") Лежак
 
-        .filter__block-item
-            label.filter__block-label Когтеточка
-                input.filter__block-check.filter-services(type="checkbox" value='stend')
+            .filter__block-item
+                input.filter__block-check.filter-services(type="checkbox" value='stend' id='services3')
+                label.filter__block-label(for="services3") Когтеточка
 
-        .filter__block-item
-            label.filter__block-label Игровой-комплекс
-                input.filter__block-check.filter-services(type="checkbox" value='game')
+            .filter__block-item
+                input.filter__block-check.filter-services(type="checkbox" value='game' id='services4')
+                label.filter__block-label(for="services4") Игровой-комплекс
 
-        .filter__block-item
-            label.filter__block-label Домик
-                input.filter__block-check.filter-services(type="checkbox" value='house')
+            .filter__block-item
+                input.filter__block-check.filter-services(type="checkbox" value='house' id='services5')
+                label.filter__block-label(for="services5") Домик
 
-    .filter__block.filter__block-btns
-        button.button.button-yellow.filter__btn#send Применить
-        button.button.button-yellow-transparent.filter__btn.filter__btn-reset Сбросить фильтр
+        .filter__block.filter__block-btns
+            button.button.button-yellow.filter__btn#send Применить
+            button.button.button-yellow-transparent.filter__btn.filter__btn-reset#reset Сбросить фильтр
