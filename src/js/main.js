@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const allCards = document.querySelectorAll('.card__item');
         const allSortItems = document.querySelectorAll('.sort__item');
 
+        //filter
         if (target.matches('#send')) {
             e.preventDefault();
             const arrSquare = getArrFilterValue(square);
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
+        //reset filter
         if(target.matches('#reset')) {
             e.preventDefault();
             Array.from(allCards).forEach(card => {
@@ -59,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             target.classList.remove('show');
         }
 
+        //open sort
         if(target.matches('#sort') || target.closest('#sort')) {
             if(target.parentNode.classList.contains('active')) {
                 target.parentNode.classList.remove('active')
@@ -74,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        //open menu
         if(target.matches('.filter__open-btn')) {
             target.nextElementSibling.classList.toggle('show');
         }
