@@ -26,12 +26,12 @@ module.exports = function styles() {
             cascade: false
         }))
         //.pipe(shorthand())
-        /*.pipe(cleanCSS({
+        .pipe(cleanCSS({
             debug: true,
             compatibility: '*'
         }, details => {
             console.log(`${details.name}: Original size:${details.stats.originalSize} - Minified size: ${details.stats.minifiedSize}`)
-        }))*/
+        }))
         .pipe(sourcemaps.write())
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('build/css'))

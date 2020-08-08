@@ -1,11 +1,13 @@
 header.header
-    .wrapper
+    .wrapper.header__wrap
         .grid
             .header__logo.cell.xl-4
                 a.header__logo-link(href="/")
                     svg.header__logo-svg
                         use(href="#logo")
                     .header__logo-text котейка
+            input.burger(type="checkbox" id="burger")
+            label.burger__label(for="burger")
             nav.menu.grid.cell.xl-8.end-xl.middle-xl
                 .menu__item
                     a.menu__item-link(data-text="Почему мы?" href="#") Почему мы?

@@ -1,6 +1,10 @@
 .card {
   padding-left: 20px;
 
+  @include mq(sm) {
+    padding-left: 0;
+  }
+
   &__item {
     margin-bottom: 30px;
 

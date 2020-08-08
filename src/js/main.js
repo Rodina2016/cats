@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if(target.matches('#reset')) {
+            e.preventDefault();
             Array.from(allCards).forEach(card => {
                 card.classList.remove('hide');
             });
@@ -58,10 +59,23 @@ document.addEventListener('DOMContentLoaded', () => {
             target.classList.remove('show');
         }
 
-        if(target.matches('#sort')) {
-            Array.from(allSortItems).forEach(item => {
-                item.classList.add('show');
-            })
+        if(target.matches('#sort') || target.closest('#sort')) {
+            if(target.parentNode.classList.contains('active')) {
+                target.parentNode.classList.remove('active')
+                Array.from(allSortItems).forEach((item, ind) => {
+                    item.classList.remove('show');
+                });
+                allSortItems[0].classList.add('show');
+            } else {
+                target.parentNode.classList.add('active')
+                Array.from(allSortItems).forEach(item => {
+                    item.classList.add('show');
+                });
+            }
+        }
+
+        if(target.matches('.filter__open-btn')) {
+            target.nextElementSibling.classList.toggle('show');
         }
     });
 

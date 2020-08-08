@@ -1,0 +1,46 @@
+.burger {
+  display: none;
+
+  &__label {
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-top: 3px solid map_get($palette, content);
+
+    @include mq(sm) {
+      display: block;
+    }
+
+    @include mq(xs) {
+      right: 15px;
+    }
+
+    &:after,
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      height: 3px;
+      width: 100%;
+      background-color: map_get($palette, content);
+      border-radius: 5px;
+    }
+
+    &:after {
+      top: 6px;
+    }
+
+    &:before {
+      top: 15px;
+    }
+  }
+
+  &:checked {
+    & + .burger__label + .menu {
+      display: block;
+    }
+  }
+}

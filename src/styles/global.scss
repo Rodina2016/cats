@@ -76,6 +76,10 @@ p {
 .main {
   padding-top: 62px;
   flex-grow: 1;
+
+  @include mq(sm) {
+    padding-top: 25px;
+  }
 }
 
 .layout {
@@ -91,6 +95,10 @@ h1 {
   font-weight: bold;
   font-size: 36px;
   line-height: 43px;
+
+  @include mq(sm) {
+    font-size: 30px;
+  }
 }
 
 .button {

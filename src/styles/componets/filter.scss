@@ -1,4 +1,15 @@
 .filter {
+  &__open {
+    &-btn {
+      display: none;
+
+      @include mq(sm) {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
   &__block {
     margin-bottom: 35px;
 
@@ -79,6 +90,16 @@
       &.show {
         display: block;
       }
+    }
+  }
+}
+
+#filter-card {
+  @include mq(sm) {
+    display: none;
+
+    &.show {
+      display: block;
     }
   }
 }
